@@ -1,0 +1,52 @@
+.img-logo {
+    width: 80px;
+    height: 80px;
+    margin-top: 2.5em;
+}
+
+.login {
+    height: 90%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+}
+
+.form-login label {
+    font-size: 1.2em;
+}
+.form-login button {
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+} 
+
+#btn1 {
+    margin-top: 20px;
+    background-color: #8580b5;
+}
+
+#btn1:disabled {
+    background-color: #f6e8ea;
+}
+
+#btn2 {
+    width: 90%;
+    margin-top: 5px;
+    background-color: #ADA9CE;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.form-login input, button {
+    font-size: 1.2em;
+    padding: 10px;
+}

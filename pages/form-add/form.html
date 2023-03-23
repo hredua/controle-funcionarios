@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>Adicionar Contratante/Funcionário</title>
+</head>
+<body>
+    <header class="centralize">
+        <img class="img-logo" src="../../assets/images/logo.PNG" alt="">
+    </header>
+    <main class="form-register">
+        <form action="" method="get" id="add-client">
+            <div class="radio">
+                <label for="contratante">Contratante</label>
+                <input type="radio" name="tipo-cliente" id="contratante" checked>
+                <label for="funcionario">Funcionário</label>
+                <input type="radio" name="tipo-cliente" id="funcionario">
+            </div>
+            <div class="form-client">
+                <label>Nome:</label>
+                <input type="text" name="name" id="name"  oninput="validateFields()">
+                <label>Sobrenome:</label>
+                <input type="text" name="lastName" id="lastName"  oninput="validateFields()">
+                <label>Telefone:</label>
+                <input type="number" name="phone" id="phone"  oninput="validateFields()">
+                <div class="boss">
+                    <label>Data do contrato:</label>
+                    <input type="date" name="dateInit" id="dateInit"  oninput="validateFields()">
+                    <label>Data de validade do contrato:</label>
+                    <input type="date" name="endDate" id="endDate"  oninput="validateFields()">
+                    <label>Vaga</label>
+                    <textarea name="vacancy" id="vacancy" cols="5" rows="3"  oninput="validateFields()"></textarea>
+                    <label>Valor da vaga:</label>
+                    <input type="number" name="vacancyValue" id="vacancyValue" oninput="validateFields()">
+                </div>
+                <div class="employee">
+                    <label>Nome da mãe (completo):</label>
+                    <input type="text" name="motherName" id="motherName" oninput="validateFields()">
+                    <label>Data de nascimento:</label>
+                    <input type="date" name="bday" id="bday" oninput="validateFields()">
+                    <label>Número do RG:</label>
+                    <input type="number" name="rg" id="rg" oninput="validateFields()">
+                    <p id="ref"><b>Referências</b></p>
+                    <label>Nome:</label>
+                    <input type="text" name="reference1Name" id="reference1Name" oninput="validateFields()">
+                    <label>Telefone:</label>
+                    <input type="tel" name="reference1Phone" id="reference1Phone" oninput="validateFields()">
+                    <label>Nome:</label>
+                    <input type="text" name="reference2Name" id="reference2Name" oninput="validateFields()">
+                    <label>Telefone:</label>
+                    <input type="tel" name="reference2Phone" id="reference2Phone" oninput="validateFields()">
+                </div>
+                <div class="portion">
+                    <div>
+                        <label for="portion1">Parcela 1 </label>
+                        <input type="checkbox" name="portion1" id="portion1">
+                    </div>
+                    <div>
+                        <label for="portion2">Parcela 2</label>
+                    <input type="checkbox" name="portion2" id="portion2">
+                    </div>
+                </div>
+            </div>
+            <button id="btnSalvar" disabled='true'>Salvar</button>
+        </form>
+        <button id="btnCancelar">Cancelar</button>
+    </main>
+
+    <footer class="down-bar">
+        <i class='bx bxs-home-heart'></i>
+        <i class='bx bx-male-female'></i>
+        <img src="../../assets/images/logo-sl-branco.png" alt="">
+        <i class='bx bx-female'></i>
+        <i class='bx bxs-exit' id="exit" ></i>
+    </footer>
+    
+
+    <script src="../../loading.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="../../firebaseInit.js"></script>
+    <script src="../../auth-guard.js"></script>
+    <script src="../../navbar.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #f6e8ea;
+}
+
+hr {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: groove;
+  border-width: 2px;
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+}
+
+.down-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #8580b5;
+
+}
+
+.bx {
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add .bx {
+    font-size: 4em;
+    color: #9e9d9d;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+}
+
+.loading {
+    background-color: #f6e8ead5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loading img {
+    width: 85px;
+    height: 85px;
+}
+
+ @-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+
+.pulsate-fwd {
+	-webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+	        animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+footer img {
+  width: 30px;
+  padding: 5px;
+  transform: scale(2) translateY(-3px);
+  background-color: #8580b5;
+  border-radius: 50px;
+}
+
+.bxs-phone, .bxl-whatsapp {
+  color: black;
+  font-size: 1.5em;
+}
+
+.reference-call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+}
+
+.phone-employee-icons {
+  padding: 10px;
+  gap: 15px;
+}
+
+.warning {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}

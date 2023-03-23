@@ -1,0 +1,74 @@
+h1{
+    padding: 10px;
+    font-size: 1.3em;
+
+}
+
+.contracts{
+    margin: 60px 0;
+}
+
+.contractModal {
+    margin: auto;
+    margin-top: 10px;
+    width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    line-height: 2em;
+}
+
+.contractModal:last-child{
+    margin-bottom: 60px  ;
+}
+
+.contractModal h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-weight: 400;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.contractModal p {
+    font-size: 1em;
+}
+
+
+
+
+.contractModal p:nth-child(2) {
+    margin: 8px 0 0 0;
+}
+.contractModal p:nth-child(3) {
+    margin: 0 0 15px 0;
+}
+.contractModal p:nth-child(4) {
+    margin: 0 0 15px 0;
+}
+
+.contractModal .portion .portion1, .portion2 {
+    display: flex;
+    gap: 5px;
+}
+
+input {
+    height: 25px;
+    width: 25px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+ 
+.bxs-edit, .bxs-trash{
+    color: black;
+    font-size: 1.4em;
+    padding: 10px;
+}
+.bx-male-female {
+    border-bottom: 2px solid #fff;
+}

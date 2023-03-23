@@ -1,0 +1,70 @@
+.img-logo {
+    width: 80px;
+    height: 80px;
+    margin-top: 2.5em;
+}
+
+.form-register {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 90%;
+    font-size: 1.2em;
+
+}
+
+.form-register .radio {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.form-register .radio #contratante{
+    margin-right: 20px;
+}
+
+.form-register input, textarea{
+    padding: 10px;
+    font-size: 1em;
+}
+
+.form-client, .boss, .employee {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.portion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#btnSalvar, #btnCancelar {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#btnSalvar {
+    background-color: #8580b5;
+    margin-top: 20px;
+}
+
+#btnSalvar:disabled {
+    background-color: #f6e8ea;
+}
+
+#btnCancelar {
+    background-color: #ADA9CE;
+    margin-top: 5px;
+}
+
+#ref {
+    padding: 20px 0;
+}
