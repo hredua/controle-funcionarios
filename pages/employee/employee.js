@@ -30,7 +30,7 @@ function myScope() {
                 divEdit.classList.add('top')
                 contractModal.appendChild(divEdit)
                 const h2 = document.createElement('h2')
-                h2.innerHTML = `<b>${employee[i].name} ${employee[i].lastName}</b>`
+                h2.innerHTML = `<b>${employee[i].name}</b>`
                 const divEditDelete = document.createElement('div')
                 divEditDelete.classList.add('edit-delete')
                 const edit = document.createElement('i')
