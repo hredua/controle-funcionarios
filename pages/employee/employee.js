@@ -48,7 +48,9 @@ function myScope() {
                 const pMotherName = document.createElement('p')
                 const pbDay = document.createElement('p')
                 const pGeralRegister = document.createElement('p')
+                const district = document.createElement('p')
                 const reference = document.createElement('p')
+                const wage = document.createElement('p')
                 const pReferenceOneName = document.createElement('p')
                 const phone = document.createElement('p')
                 const phoneEmployeeIcons = document.createElement('div')
@@ -85,6 +87,8 @@ function myScope() {
                 pMotherName.innerHTML = `<b>Nome da mãe:</b> ${employee[i].motherName}`
                 pbDay.innerHTML = `<b>Data de Nascimento:</b> ${formatDate(employee[i].bday)}`
                 pGeralRegister.innerHTML = `<b>Numero do RG:</b> ${employee[i].geralRegister}`
+                district.innerHTML = `<b>Bairro:</b> ${employee[i].district}`
+                wage.innerHTML = `<b>Pretensão salarial:</b> R$ ${employee[i].wage}`
                 reference.innerHTML = '<b>Referências</b>'
                 pReferenceOneName.innerHTML = `<b>Nome:</b> ${employee[i].referenceOneName}`
                 pReferenceOnePhone.innerHTML = `<b>Telefone:</b> ${employee[i].referenceOnePhone}`
@@ -98,10 +102,12 @@ function myScope() {
                 phoneEmployeeIcons.appendChild(whatsappEmployee)
                 spam.appendChild(pMotherName)
                 spam.appendChild(pbDay)
-                spam.appendChild(pGeralRegister)                
-                spam.appendChild(reference)                
-                spam.appendChild(referenceDiv)              
-                referenceDiv.appendChild(namePhone)                
+                spam.appendChild(pGeralRegister)
+                spam.appendChild(district)
+                spam.appendChild(wage)
+                spam.appendChild(reference)
+                spam.appendChild(referenceDiv)
+                referenceDiv.appendChild(namePhone)
                 namePhone.appendChild(pReferenceOneName)
                 namePhone.appendChild(pReferenceOnePhone)
                 referenceDiv.appendChild(callDiv)

@@ -9,7 +9,14 @@
 }
 
 body {
-    background-color: #f6e8ea;
+    background-color: #fefafa;
+}
+
+h1{
+  padding: 10px;
+  font-size: 1.3em;
+  font-family: 'Amita', cursive;
+  color: #746BAE;
 }
 
 hr {
@@ -53,7 +60,7 @@ hr {
 }
 
 .loading {
-    background-color: #f6e8ead5;
+    background-color: #fefafab1;
     position: absolute;
     width: 100%;
     height: 100%;

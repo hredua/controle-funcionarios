@@ -14,7 +14,7 @@ h1{
     width: 95%;
     padding: 20px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #f0ebeb;
     line-height: 2em;
 }
 
@@ -40,7 +40,7 @@ h1{
     margin-top: 15px;
 }
 
-.contractModal p:nth-child(5) {
+.contractModal p:nth-child(7) {
     margin: 15px 0 5px 0;
 }
 
