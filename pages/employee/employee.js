@@ -86,7 +86,7 @@ function myScope() {
 
                 if(employee[i].new) contractModal.style.borderLeft = '10px solid #77c8ff'
                 if(employee[i].checked) contractModal.style.borderLeft = '10px solid #8cff8c'
-                if(employee[i].working) contractModal.style.borderLeft = '10px solid #ff7c7c'
+                if(employee[i].working) contractModal.style.borderLeft = '10px solid #ff3f3f'
                
                 phone.innerHTML = `<b>Telefone:</b> ${employee[i].phone}`
                 pMotherName.innerHTML = `<b>Nome da mãe:</b> ${employee[i].motherName}`
