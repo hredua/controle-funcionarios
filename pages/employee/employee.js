@@ -85,8 +85,8 @@ function myScope() {
                 const pReferenceTwoPhone = document.createElement('p')
 
                 if(employee[i].new) contractModal.style.borderLeft = '20px solid blue'
-                if(employee[i].checked) contractModal.style.backgroundColor = '20px solid green'
-                if(employee[i].working) contractModal.style.backgroundColor = '20px solid red'
+                if(employee[i].checked) contractModal.style.borderLeft = '20px solid green'
+                if(employee[i].working) contractModal.style.borderLeft = '20px solid red'
                
                 phone.innerHTML = `<b>Telefone:</b> ${employee[i].phone}`
                 pMotherName.innerHTML = `<b>Nome da mãe:</b> ${employee[i].motherName}`
