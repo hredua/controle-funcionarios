@@ -18,8 +18,14 @@
     margin-bottom: 30px;
 }
 
-.form-register .radio #contratante{
-    margin-right: 20px;
+.radio #contratante, #checked, #new{
+    margin-right: 10px;
+}
+
+.form-register .radio {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    margin: auto;
 }
 
 .form-register input, textarea{

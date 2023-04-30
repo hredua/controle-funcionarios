@@ -1,3 +1,7 @@
+body {
+    background-color: #746BAE;
+}
+
 .img-logo {
     width: 80px;
     height: 80px;
@@ -11,6 +15,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+label {
+    color: #fff;
 }
 
 .form-login {
@@ -31,11 +39,13 @@
 
 #btn1 {
     margin-top: 20px;
-    background-color: #8580b5;
+    background-color: #fff;
+    color: #746BAE;
 }
 
 #btn1:disabled {
-    background-color: #f6e8ea;
+    background-color: #746BAE;
+    color: #fff;
 }
 
 #btn2 {

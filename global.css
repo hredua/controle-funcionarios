@@ -41,7 +41,7 @@ hr {
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: #8580b5;
+    background-color: #746BAE;
 
 }
 
@@ -115,7 +115,7 @@ footer img {
   width: 30px;
   padding: 5px;
   transform: scale(2) translateY(-3px);
-  background-color: #8580b5;
+  background-color: #746BAE;
   border-radius: 50px;
 }
 

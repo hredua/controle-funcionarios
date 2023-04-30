@@ -1,6 +1,7 @@
 function myScope() {
     showLoading()
     const result = document.querySelector('.contract')
+    const contractModal = document.querySelector('.contractModal')
     result.innerHTML = ''
 
     firebase.firestore()
@@ -82,6 +83,9 @@ function myScope() {
                 const pReferenceOnePhone = document.createElement('p')
                 const pReferenceTwoName = document.createElement('p')
                 const pReferenceTwoPhone = document.createElement('p')
+
+                if(employee[i].new) contractModal.style.backgroundColor = '#c0d6e0'
+                if(employee[i].checked) contractModal.style.backgroundColor = '#c0e0c6'
                
                 phone.innerHTML = `<b>Telefone:</b> ${employee[i].phone}`
                 pMotherName.innerHTML = `<b>Nome da mãe:</b> ${employee[i].motherName}`

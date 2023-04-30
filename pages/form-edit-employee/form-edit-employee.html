@@ -26,10 +26,10 @@
             <div class="form-client">
                 <label>Nome:</label>
                 <input type="text" name="name" id="name"  oninput="validateFields()">
-                <label>Sobrenome:</label>
-                <input type="text" name="lastName" id="lastName"  oninput="validateFields()">
                 <label>Telefone:</label>
                 <input type="number" name="phone" id="phone"  oninput="validateFields()">
+                <label>Bairro:</label>
+                <input type="text" name="district" id="district"  oninput="validateFields()">
                 <div class="boss">
                     <label>Data do contrato:</label>
                     <input type="date" name="dateInit" id="dateInit"  oninput="validateFields()">
@@ -41,6 +41,8 @@
                     <input type="number" name="vacancyValue" id="vacancyValue" oninput="validateFields()">
                 </div>
                 <div class="employee">
+                    <label>Pretensão salarial:</label>
+                    <input type="text" name="wage" id="wage" oninput="validateFields()">
                     <label>Nome da mãe (completo):</label>
                     <input type="text" name="motherName" id="motherName" oninput="validateFields()">
                     <label>Data de nascimento:</label>
@@ -56,6 +58,14 @@
                     <input type="text" name="reference2Name" id="reference2Name" oninput="validateFields()">
                     <label>Telefone:</label>
                     <input type="tel" name="reference2Phone" id="reference2Phone" oninput="validateFields()">
+                    <div class="radio">
+                        <label for="new">Novo</label>
+                        <input type="radio" name="status" id="new">
+                        <label for="checked">Checagem completa</label>
+                        <input type="radio" name="status" id="checked">
+                        <label for="working">Contratada</label>
+                        <input type="radio" name="status" id="working">
+                    </div>
                 </div>
                 <div class="portion">
                     <div>

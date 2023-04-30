@@ -18,7 +18,7 @@ function myScope () {
     const radio = document.querySelector('.radio')
     const name = form.querySelector('#name')
     const phone = form.querySelector('#phone')
-    const lastName = form.querySelector('#lastName')
+    const district = form.querySelector('#district')
     const dateInit = form.querySelector('#dateInit')
     const endDate = form.querySelector('#endDate')
     const vacance = form.querySelector('#vacancy')
@@ -26,6 +26,7 @@ function myScope () {
     const portionOne = form.querySelector('#portion1')
     const portionTwo = form.querySelector('#portion2')
     const btnSalvar = form.querySelector('#btnSalvar')
+    const wage = form.querySelector('#wage')
     const motherName = form.querySelector('#motherName')
     const bday = form.querySelector('#bday')
     const geralRegister = form.querySelector('#rg')
@@ -33,6 +34,9 @@ function myScope () {
     const reference1Phone = form.querySelector('#reference1Phone')
     const reference2Name = form.querySelector('#reference2Name')
     const reference2Phone = form.querySelector('#reference2Phone')
+    const newEmployee = form.querySelector('#new')
+    const checked = form.querySelector('#checked')
+    const working = form.querySelector('#working')
 
 
 
@@ -69,7 +73,7 @@ function myScope () {
             contratante.checked = true;
             name.value = employee.name
             phone.value = employee.phone
-            lastName.value = employee.lastName
+            district.value = employee.district
             dateInit.value = employee.date
             endDate.value = employee.endDate
             vacance.value = employee.vacancy
@@ -80,8 +84,9 @@ function myScope () {
         } else {
             funcionario.checked = true;
             name.value = employee.name
-            lastName.value = employee.lastName
             phone.value = employee.phone
+            district.value = employee.district
+            wage.value = employee.wage
             motherName.value = employee.motherName
             bday.value = employee.bday
             geralRegister.value = employee.geralRegister
@@ -89,6 +94,10 @@ function myScope () {
             reference1Phone.value = employee.referenceOnePhone
             reference2Name.value = employee.referenceTwoName
             reference2Phone.value = employee.referenceTwoPhone
+            newEmployee.checked = employee.new
+            checked.checked = employee.checked
+            working.checked = employee.working
+
             validateFields()
 
         }
@@ -133,7 +142,6 @@ function myScope () {
         const contract = {
             type: contratante.checked ? 'boss' : 'employee',
             name: name.value,
-            lastName: lastName.value,
             date: dateInit.value,
             endDate: endDate.value,
             vacancy: vacance.value,
@@ -148,7 +156,8 @@ function myScope () {
         const employee = {
             type: funcionario.checked ? 'employee' : 'boss',
             name: name.value,
-            lastName: lastName.value,
+            district: district.value,
+            wage: wage.value,
             motherName: motherName.value,
             bday: bday.value,
             geralRegister: geralRegister.value,
@@ -156,6 +165,9 @@ function myScope () {
             referenceOnePhone: reference1Phone.value,
             referenceTwoName: reference2Name.value,
             referenceTwoPhone: reference2Phone.value,
+            new: newEmployee.checked,
+            checked: checked.checked,
+            working: working.checked,
             user: {
                 uid: firebase.auth().currentUser.uid
             }
@@ -210,7 +222,7 @@ function myScope () {
                     .update(employee)
                     .then(() => {
                         hideLoading()
-                        window.location.href = '../employee/employee'
+                        window.location.href = '../employee/employee.html'
                     })
                     .catch(() => {
                         hideLoading()
@@ -227,7 +239,6 @@ function validateFields() {
     const contratante = document.querySelector('#contratante');
     const funcionario = document.querySelector('#funcionario');
     const name = form.querySelector('#name')
-    const lastName = form.querySelector('#lastName')
     const dateInit = form.querySelector('#dateInit')
     const endDate = form.querySelector('#endDate')
     const vacance = form.querySelector('#vacancy')
@@ -243,18 +254,18 @@ function validateFields() {
     const btnSalvar = form.querySelector('#btnSalvar')
 
     if(contratante.checked) {
-        if(!name.value || !lastName.value || !dateInit.value || !endDate.value || !vacance.value || !vacancyValue.value) {
+        if(!name.value || !dateInit.value || !endDate.value || !vacance.value || !vacancyValue.value) {
             btnSalvar.disabled = true
         }
-        if(name.value && lastName.value && dateInit.value && endDate.value && vacance.value && vacancyValue.value) {
+        if(name.value && dateInit.value && endDate.value && vacance.value && vacancyValue.value) {
             btnSalvar.disabled = false
         }
     }
     if(funcionario.checked) {
-        if(!name.value || !lastName.value || !motherName.value || !bday.value || !geralRegister.value || !reference1Name.value || !reference1Phone.value || !reference2Name.value || !reference2Phone.value) {
+        if(!name.value || !motherName.value || !bday.value || !geralRegister.value || !reference1Name.value || !reference1Phone.value || !reference2Name.value || !reference2Phone.value) {
             btnSalvar.disabled = true
         }
-        if(name.value && lastName.value && motherName.value && bday.value && geralRegister.value && reference1Name.value && reference1Phone.value && reference2Name.value && reference2Phone.value) {
+        if(name.value && motherName.value && bday.value && geralRegister.value && reference1Name.value && reference1Phone.value && reference2Name.value && reference2Phone.value) {
             btnSalvar.disabled = false
         }
 
