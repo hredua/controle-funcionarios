@@ -222,7 +222,7 @@ function myScope () {
                     .update(employee)
                     .then(() => {
                         hideLoading()
-                        window.location.href = '../employee/employee.html'
+                        window.location.href = '../employee/employee'
                     })
                     .catch(() => {
                         hideLoading()

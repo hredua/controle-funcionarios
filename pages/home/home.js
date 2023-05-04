@@ -26,7 +26,7 @@ function myScope() {
                 const createDiv = document.createElement('div')
                 createDiv.classList.add('result')
                 const createP = document.createElement('p')
-                let resultTextName = `${contracts[i].name} ${contracts[i].lastName} : `
+                let resultTextName = `${contracts[i].name}: `
                 let resultTextDays = `Restam <strong>${Math.ceil(daysRemaining)}</strong> dias para o fim do contrato`
                 createP.innerHTML = `${resultTextName} <br> ${resultTextDays}`
                 createDiv.appendChild(createP)

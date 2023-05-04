@@ -24,6 +24,11 @@ function logout(){
     employee.addEventListener('click', () => {
         window.location.href = "../employee/employee"
     })
+
+    const budgets = document.querySelector('.budget')
+    budgets.addEventListener('click', () => {
+        window.location.href = "../budgets/budget"
+    })
  }
 
  navbar()
