@@ -195,7 +195,7 @@ function myScope() {
                     window.open(`https://wa.me/55` + disk, '_blank')
                 })
 
-                filters.addEventListener('click', (e) => {
+                filters.addEventListener('change', (e) => {
                     if(filters.value === 'checked'){
                         if(check) contractModal.style.display = 'block'
                         if(!check) contractModal.style.display = 'none'
