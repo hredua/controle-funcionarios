@@ -2,6 +2,8 @@ function myScope() {
     showLoading()
     const result = document.querySelector('.contract')
     const contractModal = document.querySelector('.contractModal')
+    const search = document.querySelector('#filter')
+    const filters = document.querySelector('#filters')
     result.innerHTML = ''
 
     firebase.firestore()
@@ -142,6 +144,9 @@ function myScope() {
                 const phoneOne = employee[i].referenceOnePhone
                 const phoneTwo = employee[i].referenceTwoPhone
                 const disk = employee[i].phone
+                const filterNew = employee[i].new
+                const check = employee[i].checked
+                const working = employee[i].working
 
                 edit.addEventListener('click', () => {
                     window.location.href = `../form-edit-employee/form-edit-employee?uid=` + uid
@@ -189,6 +194,27 @@ function myScope() {
                 whatsappEmployee.addEventListener('click', () => {
                     window.open(`https://wa.me/55` + disk, '_blank')
                 })
+
+                filters.addEventListener('click', (e) => {
+                    if(filters.value === 'checked'){
+                        if(check) contractModal.style.display = 'block'
+                        if(!check) contractModal.style.display = 'none'
+                    }
+                    if(filters.value === 'new') {
+                        if(filterNew) contractModal.style.display = 'block'
+                        if(!filterNew) contractModal.style.display = 'none'
+                    }
+                    if(filters.value === 'working') {
+                        if(working) contractModal.style.display = 'block'
+                        if(!working) contractModal.style.display = 'none'
+                    }
+                    if(filters.value === 'all') {
+                        contractModal.style.display = 'block'
+                    }
+                })
+
+
+                
             }
         })
 

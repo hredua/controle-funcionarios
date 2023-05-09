@@ -82,3 +82,20 @@ input {
     margin-top: 10px;
     padding: 5px 0;
 }
+
+.filter {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#filters option:nth-child(2){
+    color: #03a303;
+}
+
+#filters option:nth-child(3){
+    color: #007dd1;
+}
+
+#filters option:nth-child(4){
+    color: #dd0000;
+}
